@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Fupre Chess Player&#39;s Database</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fupre Chess Player Database</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="elo.css">
+</head>
+
+<body>
+
+  <h1>Fupre Chess Player Database</h1>
+
+  <div class="card">
+    <h2>Add Player</h2>
+    <div class="input-group">
+      <input id="playerName" placeholder="Player Name">
+      <input id="playerRating" type="number" placeholder="Rating">
+      <button onclick="addPlayer()">Add Player</button>
+      <button onclick="clearPlayers()">Clear Players</button>
+    </div>
+    <div id="playerList"></div>
+  </div>
+
+  <div class="card">
+    <h2>Record Match</h2>
+    <div class="input-group">
+      <select id="player1"></select>
+      <select id="player2"></select>
+      <select id="matchResult">
+        <option value="win">Player 1 Wins</option>
+        <option value="loss">Player 2 Wins</option>
+        <option value="draw">Draw</option>
+      </select>
+      <button onclick="recordMatch()">Record</button>
+      <button onclick="undoLastMatch()">Undo Last Match</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Leaderboard</h2>
+    <div id="leaderboard"></div>
+  </div>
+
+  <div class="card">
+    <h2>Match History</h2>
+    <div class="input-group">
+      <input id="filterPlayer" placeholder="Filter by Player">
+      <input id="filterDate" type="date">
+      <button onclick="resetFilters()">Reset Filters</button>
+      <button onclick="exportCSV()">Export CSV</button>
+      <button onclick="clearMatchHistory()">Clear History</button>
+    </div>
+    <div id="matchHistory"></div>
+  </div>
+
+  <div class="card">
+    <h2>Rating Progress</h2>
+    <canvas id="ratingChart" width="600" height="400"></canvas>
+  </div>
+
+  
+  <script src="elo.js"></script>
+
+
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
